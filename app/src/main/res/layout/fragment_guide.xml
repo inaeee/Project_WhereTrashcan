@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <EditText
+            android:id="@+id/editTextQuery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="11"
+            android:hint="쓰레기 품목을 입력하세요."
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/buttonSearch"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#345B63"
+            android:textColor="#D4ECDD"
+            android:onClick="onClick"
+            android:text="검색" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/keyPoint"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:src="@drawable/keypoint" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+            <Button
+                android:id="@+id/paper"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:text="종이류"
+                android:gravity="center"
+                android:layout_margin="10dp"
+                android:background="@drawable/paper"
+                app:layout_constraintRight_toLeftOf="@+id/guideline"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/packAndCup"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:text="종이팩, 종이컵"
+                android:gravity="center"
+                android:layout_margin="10dp"
+                android:background="@drawable/pack"
+                app:layout_constraintLeft_toRightOf="@+id/guideline"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/canAndScrap"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:text="금속캔, 고철류"
+                android:gravity="center"
+                android:layout_margin="10dp"
+                android:background="@drawable/can"
+                app:layout_constraintRight_toLeftOf="@+id/guideline"
+                app:layout_constraintTop_toBottomOf="@+id/paper" />
+
+            <Button
+                android:id="@+id/glass"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:text="유리병류"
+                android:gravity="center"
+                android:layout_margin="10dp"
+                android:background="@drawable/glass"
+                app:layout_constraintLeft_toRightOf="@+id/guideline"
+                app:layout_constraintTop_toBottomOf="@+id/packAndCup" />
+
+            <Button
+                android:id="@+id/petPlasticVinyl"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:text="페트병, 플라스틱, 비닐"
+                android:gravity="center"
+                android:layout_margin="10dp"
+                android:background="@drawable/pet"
+                app:layout_constraintRight_toLeftOf="@+id/guideline"
+                app:layout_constraintTop_toBottomOf="@+id/canAndScrap" />
+
+            <Button
+                android:id="@+id/styrofoam"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:text="발포합성수지(스티로폼)"
+                android:gravity="center"
+                android:layout_margin="10dp"
+                android:background="@drawable/styrofoam"
+                app:layout_constraintLeft_toRightOf="@+id/guideline"
+                app:layout_constraintTop_toBottomOf="@+id/glass" />
+
+            <Button
+                android:id="@+id/appliance"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:text="폐가전제품 및 대형폐기물"
+                android:gravity="center"
+                android:layout_margin="10dp"
+                android:background="@drawable/appliance"
+                app:layout_constraintRight_toLeftOf="@+id/guideline"
+                app:layout_constraintTop_toBottomOf="@+id/petPlasticVinyl" />
+
+            <Button
+                android:id="@+id/foodWaste"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:text="음식물류폐기물"
+                android:gravity="center"
+                android:layout_margin="10dp"
+                android:background="@drawable/food"
+                app:layout_constraintLeft_toRightOf="@+id/guideline"
+                app:layout_constraintTop_toBottomOf="@+id/styrofoam" />
+
+            <Button
+                android:id="@+id/hazardousWaste"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:text="유해폐기물"
+                android:gravity="center"
+                android:layout_margin="10dp"
+                android:background="@drawable/hazardous"
+                app:layout_constraintRight_toLeftOf="@+id/guideline"
+                app:layout_constraintTop_toBottomOf="@+id/appliance" />
+
+            <Button
+                android:id="@+id/etc"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:text="가연성폐기물 및 불연성폐기물 / 기타폐기물"
+                android:gravity="center"
+                android:layout_margin="10dp"
+                android:background="@drawable/etc"
+                app:layout_constraintLeft_toRightOf="@+id/guideline"
+                app:layout_constraintTop_toBottomOf="@+id/foodWaste" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <!--
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/guideintro"
+            android:layout_width="wrap_content"
+            android:layout_height="250dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/guideintro" />
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="SpeakableTextPresentCheck">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/paper"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:layout_marginRight="10dp"
+                        android:text="종이류" />
+
+                    <Button
+                        android:id="@+id/packAndCup"
+                        android:layout_width="150dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="10dp"
+                        android:text="종이팩, 종이컵" />
+                </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/canAndScrap"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="10dp"
+                    android:text="금속캔, 고철류" />
+
+                <Button
+                    android:id="@+id/glass"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="유리병류" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/petPlasticVinyl"
+                    android:layout_width="180dp"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="10dp"
+                    android:text="페트병,플라스틱,비닐" />
+
+                <Button
+                    android:id="@+id/styrofoam"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="발포합성수지(스티로폼)" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/largeWaste"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="10dp"
+                    android:text="폐가전제품 및 대형폐기물" />
+
+                <Button
+                    android:id="@+id/foodWaste"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="음식물류폐기물" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/hazardousWaste"
+                    android:layout_width="120dp"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="10dp"
+                    android:text="유해폐기물" />
+
+                <Button
+                    android:id="@+id/etc"
+                    android:layout_width="265dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="가연성 및 불연성폐기물/기타폐기물" />
+            </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+    -->
+
+
+</LinearLayout>

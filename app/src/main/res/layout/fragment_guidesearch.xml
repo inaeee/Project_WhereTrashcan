@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:background="#345B63"
+            android:text="뒤로가기"
+            android:textColor="#D4ECDD" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="검색결과"
+            android:textSize="20dp"
+            android:textColor="#345B63"
+            android:layout_margin="20dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="#345B63"
+            android:padding="20dp"
+            android:gravity="center"
+            android:text="    품목    "
+            android:layout_marginRight="20dp"/>
+
+        <TextView
+            android:id="@+id/nameView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="품목이름"
+            android:padding="20dp"
+            android:gravity="center"
+            android:textColor="#345B63"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="#345B63"
+            android:padding="20dp"
+            android:gravity="center"
+            android:text="    구분    "
+            android:layout_marginRight="20dp"/>
+
+        <TextView
+            android:id="@+id/partView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="구분이름"
+            android:padding="20dp"
+            android:gravity="center"
+            android:textColor="#345B63"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="#345B63"
+            android:padding="20dp"
+            android:gravity="center"
+            android:text=" 배출방법"
+            android:layout_marginRight="20dp"/>
+
+        <TextView
+            android:id="@+id/dischargeView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="배출방법"
+            android:padding="20dp"
+            android:gravity="center"
+            android:textColor="#345B63"/>
+
+    </LinearLayout>
+
+</LinearLayout>
