@@ -27,7 +27,7 @@
         </activity>
 
         <meta-data android:name="com.kakao.sdk.AppKey"
-            android:value="71869bc827e8b95f33b3bd63b505bec4">
+            android:value="#APPKEY#">
         </meta-data>
     </application>
 
