@@ -51,7 +51,7 @@ public class MapFragment extends Fragment implements View.OnClickListener{
     String y = null;
 
     private static String GEOCODE_URL="http://dapi.kakao.com/v2/local/search/keyword.json?query=";
-    private static String GEOCODE_USER_INFO="KakaoAK 90e44bed5ad797ad39a34168614a85ba";
+    private static String GEOCODE_USER_INFO="KakaoAK #KEY#";
 
     @Nullable
     @Override
